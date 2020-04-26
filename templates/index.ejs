@@ -1,0 +1,65 @@
+<% let scheme = site.customConfig.scheme; %>
+<!DOCTYPE HTML>
+<!--
+	<% if (scheme === 'lens') {%>Lens<% } else {%>Multiverse<% } %> by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html lang="zh-cn">
+<head>
+    <%- include('includes/head', { siteTitle: themeConfig.siteName }) %>
+</head>
+<body <% if (scheme === 'lens') {%>class="is-preload-0 is-preload-1 is-preload-2"<% } else {%>class="is-preload"<% } %>>
+
+<!-- 外封 -->
+<div <% if (scheme === 'lens') {%>id="main"<% } else {%>id="wrapper"<% } %>>
+
+    <!-- 页眉 -->
+    <%- include('includes/header') %>
+
+    <!-- 主要内容 -->
+    <%- include('includes/post-list') %>
+
+    <!-- 页脚 -->
+    <%- include('includes/footer') %>
+
+</div>
+
+
+<!-- 脚本 -->
+<% if (scheme === 'lens') {%>
+<% if ( site.customConfig.jsdelivr == true) { %>
+<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/breakpoints.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/main-lens.js"></script>
+<% } else{ %>
+<script src="media/scripts/jquery.min.js"></script>
+<script src="media/scripts/browser.min.js"></script>
+<script src="media/scripts/breakpoints.min.js"></script>
+<script src="media/scripts/main-lens.js"></script>
+<% }%>
+
+<% } else {%>
+<% if ( site.customConfig.jsdelivr == true) { %>
+<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/jquery.poptrox.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/breakpoints.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/util-multiverse.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/main-multiverse.js"></script>
+<% } else{ %>
+<script src="media/scripts/jquery.min.js"></script>
+<script src="media/scripts/jquery.poptrox.min.js"></script>
+<script src="media/scripts/browser.min.js"></script>
+<script src="media/scripts/breakpoints.min.js"></script>
+<script src="media/scripts/util-multiverse.js"></script>
+<script src="media/scripts/main-multiverse.js"></script>
+<% }%>
+
+
+
+<% } %>
+
+</body>
+</html>
