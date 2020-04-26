@@ -1,12 +1,12 @@
 ## Multiverse
 
-![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-Multiverse&Lens/images/multiverse.jpg)
+![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/multiverse.jpg)
 
 演示链接：[Multiverse](https://lifealsoisgg.github.io/photos.lifeisgg.online)
 
 ## Lens
 
-![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-Multiverse&Lens/images/lens.jpg)
+![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/lens.jpg)
 
 演示链接：[Lnes](https://lifealsoisgg.github.io/demo.photos)
 
