@@ -29,15 +29,15 @@
   
 - 举一反三：使用又拍云的webp智能判断
 
-  ![](images/webp.jpg)
+  ![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/webp.jpg)
 
   开通又拍云的云存储功能，然后开启此功能，然后在右上角的文件管理中==创建目录post-images==，之后把博客本地文件夹中的==post-images==中的图片上传上去
 
-  ![](images/上传文件.jpg)
+  ![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/上传文件.jpg)
 
   然后获取域名
 
-  ![](images/域名.jpg)
+  ![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/域名.jpg)
 
   将仅供测试的域名复制到gridea中远程连接的域名上，到时候渲染的时候就能直接引用又拍云中云存储的图片的链接，==客户端在访问此链接时会自动执行webp判断功能==。如果自己有域名，可以解析CNAME到他给你CNAME地址的，然后将这个域名填写到远程连接中即可。
 
@@ -47,8 +47,8 @@
 
   <div align=center>  
     <table><tr>    
-      <img width="50%" src=images/没有webp.jpg/>    
-      <img width="50%" src=images/有webp.jpg/>    
+      <img width="50%" src=https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/没有webp.jpg/>    
+      <img width="50%" src=https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/有webp.jpg/>    
       </tr></table>
   </div>
 
@@ -56,7 +56,7 @@
 
 - 最后一点，由于远程中的域名被改，所以如果你的网站有下一页，那么可能会链接到==域名/page/2==，而这个域名不是你真实网址，所以请自行更改链接，在==output/index.html==中
 
-  ![](images/翻页.jpg)
+  ![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/翻页.jpg)
 
 
 
