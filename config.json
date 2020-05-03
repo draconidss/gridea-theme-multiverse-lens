@@ -27,11 +27,11 @@
 			"type": "select",
 			"note": "时间格式在基本配置中设置",
 			"options": [{
-					"label": "开启",
+					"label": "true",
 					"value": true
 				},
 				{
-					"label": "关闭",
+					"label": "false",
 					"value": false
 				}
 			]
@@ -43,11 +43,11 @@
 			"value": "false",
 			"type": "select",
 			"options": [{
-					"label": "开启",
+					"label": "true",
 					"value": true
 				},
 				{
-					"label": "关闭",
+					"label": "false",
 					"value": false
 				}
 			]
