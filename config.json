@@ -20,6 +20,23 @@
 			]
 		},
 		{
+			"name": "ifDate",
+			"label": "是否显示时间",
+			"group": "布局",
+			"value": "true",
+			"type": "select",
+			"note": "时间格式在基本配置中设置",
+			"options": [{
+					"label": "开启",
+					"value": true
+				},
+				{
+					"label": "关闭",
+					"value": false
+				}
+			]
+		},
+		{
 			"name": "jsdelivr",
 			"label": "jsDelivr 加速",
 			"group": "jsDelivr 加速配置",
@@ -34,6 +51,14 @@
 					"value": false
 				}
 			]
+		},
+		{
+			"name": "website",
+			"label": "网站链接",
+			"group": "jsDelivr 加速配置",
+			"value": "",
+			"type": "input",
+			"note": "请输入网站链接"
 		},
 		{
 			"name": "username",
