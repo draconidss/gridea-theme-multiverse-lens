@@ -1,6 +1,8 @@
 ## Multiverse
 
-![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/multiverse.jpg)
+![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/multiverse1.jpg)
+
+![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/multiverse2.jpg)
 
 演示链接：[Multiverse](https://lifealsoisgg.github.io/photos.lifeisgg.online)
 
@@ -17,17 +19,17 @@
 # 特色
 - 同时兼容 Multiverse(多次元) 与 Lens(棱镜) 模板，在设置中即可修改。
 
-- 添加jsdelivr cdn加速github pages功能：在在基础配置中域名填写为
+- 添加jsdelivr cdn加速github pages功能：在在远程配置中域名填写为
 
   ```
   https://cdn.jsdelivr.net/gh/github用户名/仓库名
   ```
 
-  并在自定义配中开启并填好jsdelivr相关信息
+  并在自定义配中开启并填好jsdelivr相关信息和你不带jsdelivr的网站链接
 
   > 注意，开启后本地预览时css和js不会被加载，第一次需要同步到仓库后才能加载css和js资源
   
-- 举一反三：使用又拍云的webp智能判断
+- 举一反三：加载图片使用又拍云的webp智能判断
 
   ![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/webp.jpg)
 
@@ -54,13 +56,15 @@
 
   别担心，webp格式与普通jpg差别肉眼难以分辨
 
-- 最后一点，由于远程中的域名被改，所以如果你的网站有下一页，那么可能会链接到==域名/page/2==，而这个域名不是你真实网址，所以请自行更改链接，在==output/index.html==中
+- 最后一点，由于远程中的域名被改，所以如果你的网站有下一页，那么可能会链接到==域名/page/2==，而这个域名不是你真实网址，所以请自行更改链接，在==output/index.html==中的这里
 
   ![](https://cdn.jsdelivr.net/gh/lifealsoisgg/gridea-theme-multiverse-lens/images/翻页.jpg)
+  
+  以及标签云中进入主题文件内部，在==footer.ejs==中找到==填写真实链接==改为自己的网址即可
+  
+  
 
-
-
-​		记得==output/page/2/index.html==中要把上一页改链接，同理如果你有好几页可能要麻烦你去更改。
+​		记得==output/page/2/index.html==中也要把上一页改链接，同理如果你有好几页可能要麻烦你去更改。
 
 # 参考
 

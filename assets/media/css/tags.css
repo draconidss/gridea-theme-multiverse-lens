@@ -1,0 +1,194 @@
+a{
+	text-decoration:none;
+	transition: all 300ms ease;
+	
+}
+
+
+.widget_tag_cloud {
+  display: block;
+}
+.widget_tag_cloud div.tagcloud {
+  margin-left: -3px;
+}
+.widget_tag_cloud a {
+  font-size: 14px !important;
+  margin: 0 2px 8px 0;
+  color: #fff;
+  background-image: none !important;
+}
+.widget_tag_cloud a:hover {
+  color: #fff;
+}
+.widget_tag_cloud a .tag-link-count {
+  margin-left: 2px;
+}
+
+a.ctag-0,
+a.ctag-red,
+.tag-cloud-0,
+.tag-cloud-21,
+a.ctag-21 {
+  background-color: #e54d42 !important;
+}
+/*嫣红*/
+a.ctag-1,
+a.ctag-orange,
+.tag-cloud-1,
+.tag-cloud-19,
+a.ctag-19 {
+  background-color: #f37b1d !important;
+}
+/*桔橙*/
+a.ctag-2,
+a.ctag-yellow,
+.tag-cloud-2,
+.tag-cloud-14,
+a.ctag-14 {
+  background-color: #fbbd08 !important;
+}
+/*明黄*/
+a.ctag-3,
+a.ctag-olive,
+.tag-cloud-3,
+.tag-cloud-20,
+a.ctag-20 {
+  background-color: #8dc63f !important;
+}
+/*橄榄*/
+a.ctag-4,
+a.ctag-green,
+.tag-cloud-4,
+a.ctag-gridea,
+.tag-cloud-22,
+a.ctag-22 {
+  background-color: #39b54a !important;
+}
+/*森绿*/
+a.ctag-5,
+a.ctag-cyan,
+.tag-cloud-5,
+.tag-cloud-15,
+a.ctag-15 {
+  background-color: #1cbbb4 !important;
+}
+/*天青*/
+a.ctag-6,
+a.ctag-blue,
+.tag-cloud-6,
+.tag-cloud-26,
+a.ctag-26 {
+  background-color: #0081ff !important;
+}
+/*海蓝*/
+a.ctag-7,
+a.ctag-purple,
+.tag-cloud-7,
+.tag-cloud-25,
+a.ctag-25 {
+  background-color: #6739b6 !important;
+}
+/*姹紫*/
+a.ctag-8,
+a.ctag-mauve,
+.tag-cloud-8,
+.tag-cloud-16,
+a.ctag-16 {
+  background-color: #9c26b0 !important;
+}
+/*木槿*/
+a.ctag-9,
+a.ctag-pink,
+.tag-cloud-9,
+.tag-cloud-27,
+a.ctag-27 {
+  background-color: #e03997 !important;
+}
+/*桃粉*/
+a.ctag-10,
+a.ctag-brown,
+.tag-cloud-10,
+.tag-cloud-24,
+a.ctag-24 {
+  background-color: #a5673f !important;
+}
+/*棕褐*/
+a.ctag-11,
+a.ctag-grey,
+.tag-cloud-11,
+.tag-cloud-17,
+a.ctag-17 {
+  background-color: #8799a3 !important;
+}
+/*玄灰*/
+a.ctag-12,
+a.ctag-gray,
+.tag-cloud-12,
+.tag-cloud-18,
+a.ctag-18 {
+  background-color: #aaaaaa !important;
+}
+/*草灰*/
+a.ctag-13,
+a.ctag-black,
+.tag-cloud-13,
+.tag-cloud-23,
+a.ctag-23 {
+  background-color: #333333 !important;
+}
+
+
+/* Global Tags */
+div.tags,
+.widget_tag_cloud {
+  display: block;
+}
+div.tags.absolute,
+.absolute.widget_tag_cloud {
+  position: absolute;
+  right: 0;
+  top: -15px;
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+}
+div.tags.no-thumb,
+.no-thumb.widget_tag_cloud {
+  margin-bottom: 12.5px;
+  margin-top: -38px;
+}
+div.tags a,
+.widget_tag_cloud a,
+div.tags span,
+.widget_tag_cloud span {
+  font-size: 15px;
+  color: #fff;
+  display: inline-block;
+  padding: 4px 25px;
+  vertical-align: top;
+  border-radius: 3px;
+  margin-bottom: 5px;
+  margin-right: 5px;
+  border-radius: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background-color: #E84E89;
+}
+div.tags a:hover,
+
+.ctag {
+  background-color: #E84E89;
+}
+a[href*="nosidebar"],
+span.nosidebar,
+a[href*="fullcover"],
+span.fullcover {
+  display: none !important;
+}
+/* @end */
+
+.widget_tag_cloud a:hover {
+  -webkit-transform: translateY(-2px);
+  transform: translateY(-2px);
+}

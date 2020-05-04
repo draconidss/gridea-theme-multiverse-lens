@@ -27,12 +27,13 @@
 
 
 <!-- 脚本 -->
+<% let jsdelivr = "https://cdn.jsdelivr.net/gh/"+site.customConfig.username+"/"+site.customConfig.repository; %>
 <% if (scheme === 'lens') {%>
 <% if ( site.customConfig.jsdelivr == true) { %>
-<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/browser.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/breakpoints.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/main-lens.js"></script>
+<script src="<%= jsdelivr %>/media/scripts/jquery.min.js"></script>
+<script src="<%= jsdelivr %>/media/scripts/browser.min.js"></script>
+<script src="<%= jsdelivr %>/media/scripts/breakpoints.min.js"></script>
+<script src="<%= jsdelivr %>/media/scripts/main-lens.js"></script>
 <% } else{ %>
 <script src="media/scripts/jquery.min.js"></script>
 <script src="media/scripts/browser.min.js"></script>
@@ -42,12 +43,12 @@
 
 <% } else {%>
 <% if ( site.customConfig.jsdelivr == true) { %>
-<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/jquery.poptrox.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/browser.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/breakpoints.min.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/util-multiverse.js"></script>
-<script src="https://cdn.jsdelivr.net/gh/<%= site.customConfig.username %>/<%= site.customConfig.repository %>/media/scripts/main-multiverse.js"></script>
+<script src="<%= jsdelivr %>/media/scripts/jquery.min.js"></script>
+<script src="<%= jsdelivr %>/media/scripts/jquery.poptrox.min.js"></script>
+<script src="<%= jsdelivr %>/media/scripts/browser.min.js"></script>
+<script src="<%= jsdelivr %>/media/scripts/breakpoints.min.js"></script>
+<script src="<%= jsdelivr %>/media/scripts/util-multiverse.js"></script>
+<script src="<%= jsdelivr %>/media/scripts/main-multiverse.js"></script>
 <% } else{ %>
 <script src="media/scripts/jquery.min.js"></script>
 <script src="media/scripts/jquery.poptrox.min.js"></script>

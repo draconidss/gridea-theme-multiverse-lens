@@ -37,6 +37,23 @@
 			]
 		},
 		{
+			"name": "tagscloud",
+			"label": "是否显示标签云",
+			"group": "布局",
+			"value": "true",
+			"type": "select",
+			"note": "仅multiverse主题有效",
+			"options": [{
+					"label": "true",
+					"value": true
+				},
+				{
+					"label": "false",
+					"value": false
+				}
+			]
+		},
+		{
 			"name": "jsdelivr",
 			"label": "jsDelivr 加速",
 			"group": "jsDelivr 加速配置",
@@ -90,6 +107,14 @@
 		{
 			"name": "wikipedia-w",
 			"label": "Wiki",
+			"group": "社交",
+			"value": "",
+			"type": "input",
+			"note": "链接地址"
+		},
+		{
+			"name": "instagram",
+			"label": "Instagram",
 			"group": "社交",
 			"value": "",
 			"type": "input",

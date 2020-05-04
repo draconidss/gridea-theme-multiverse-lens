@@ -3,14 +3,14 @@
     <% if (scheme === 'lens') {%>
     <ul class="icons">
         <% if (pagination.prev) { %>
-        <li><a href="<%= pagination.prev %>" class="icon solid fa-angle-left"></a></li>
+        <li><a href="<%= pagination.prev %>" class="icon solid fa-angle-left">prev</a></li>
         <% } %>
         <% if (pagination.next) { %>
-        <li><a href="<%= pagination.next %>" class="icon solid fa-angle-right"></a></li>
+        <li><a href="<%= pagination.next %>" class="icon solid fa-angle-right">next</a></li>
         <% } %>
     </ul>
     <ul class="copyright">
-        <li><%= themeConfig.siteName %></li><li> 由 <a href="https://html5up.net">HTML5 UP</a> 设计样式。</li>
+        <li><a href="<%= site.customConfig.website %>"><%= themeConfig.siteName %></a></li><li> 由 <a href="https://html5up.net">HTML5 UP</a> 设计样式。</li>
     </ul>
     <% } else {%>
     <div class="inner split">
@@ -20,9 +20,9 @@
                 <p><%- themeConfig.siteDescription %></p>
             </section>
             <section>
-                <h2>My Links</h2>
+                <h2>FOLLOW ME ON ...</h2>
                 <ul class="icons">
-                    <% ['blogger', 'wikipedia-w','github', 'twitter', 'weibo', 'zhihu', 'facebook'].forEach((item) => { %>
+                    <% ['blogger', 'wikipedia-w','github', 'twitter','instagram', 'weibo', 'zhihu', 'facebook'].forEach((item) => { %>
                         <% if (site.customConfig[item]) { %>
                             <li><a href="<%= site.customConfig[item] %>" class="icon brands fa-<%= item %>"><span class="label"><%= item %></span></a></li>
                         <% } %>
@@ -31,6 +31,27 @@
             </section>
             <p class="copyright"><%- themeConfig.footerInfo %></p>
         </div>
+		
+		<% if (site.customConfig.tagscloud == true) {%>
+		<div>
+		<section>
+		<div style="width:100%;">
+		  <section id="tag_cloud-2" class="widget_tag_cloud">
+		    <h2>tags cloud</h2>
+		    <div class="tagcloud">
+		      <% site.tags.forEach(function(tag, tagIndex) { %>
+		        <a href="<%= site.customConfig.website %>/tag/<%= tag.slug %>" style="hover{color:green !important;}" class="ctag ctag-<%= tagIndex %> ctag-<%= tag.slug %>" aria-label=""><%= tag.name %></a>
+				
+		      <% }); %>
+		    </div>
+		
+		  </section>
+		  </div>
+		  </section>
+		  </div>
+		  <% } %>
+		  
+		
     </div>
     <% } %>
 </footer>
