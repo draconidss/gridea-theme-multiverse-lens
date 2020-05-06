@@ -1,57 +1,115 @@
 <% let scheme = site.customConfig.scheme; %>
-<footer id="footer" <% if (scheme !== 'lens') {%>class="panel"<% } %>>
-    <% if (scheme === 'lens') {%>
-    <ul class="icons">
-        <% if (pagination.prev) { %>
-        <li><a href="<%= pagination.prev %>" class="icon solid fa-angle-left">prev</a></li>
-        <% } %>
-        <% if (pagination.next) { %>
-        <li><a href="<%= pagination.next %>" class="icon solid fa-angle-right">next</a></li>
-        <% } %>
-    </ul>
-    <ul class="copyright">
-        <li><a href="<%= site.customConfig.website %>"><%= themeConfig.siteName %></a></li><li> 由 <a href="https://html5up.net">HTML5 UP</a> 设计样式。</li>
-    </ul>
-    <% } else {%>
-    <div class="inner split">
-        <div>
-            <section>
-                <h2>About</h2>
-                <p><%- themeConfig.siteDescription %></p>
-            </section>
-            <section>
-                <h2>FOLLOW ME ON ...</h2>
-                <ul class="icons">
-                    <% ['blogger', 'wikipedia-w','github', 'twitter','instagram', 'weibo', 'zhihu', 'facebook'].forEach((item) => { %>
-                        <% if (site.customConfig[item]) { %>
-                            <li><a href="<%= site.customConfig[item] %>" class="icon brands fa-<%= item %>"><span class="label"><%= item %></span></a></li>
-                        <% } %>
-                    <% }) %>
-                </ul>
-            </section>
-            <p class="copyright"><%- themeConfig.footerInfo %></p>
-        </div>
-		
-		<% if (site.customConfig.tagscloud == true) {%>
+<footer id="footer" <% if (scheme !=='lens' ) {%>class="panel"
+	<% } %>>
+	<% if (scheme === 'lens') {%>
+	<ul class="icons">
+		<% if (pagination.prev) { %>
+		<li><a href="真实链接(建议在最后一次预览后进入output里面修改所有有分页的index.html)" class="icon solid fa-angle-left">prev</a></li>
+		<% } %>
+		<% if (pagination.next) { %>
+		<li><a href="真实链接(建议在最后一次预览后进入output里面修改所有有分页的index.html)" class="icon solid fa-angle-right">next</a></li>
+		<% } %>
+	</ul>
+	<ul class="copyright">
+		<li><a href="<%= site.customConfig.website %>">
+				<%= themeConfig.siteName %></a></li>
+	</ul>
+
+	<% } else {%>
+	<div class="inner split">
 		<div>
-		<section>
-		<div style="width:100%;">
-		  <section id="tag_cloud-2" class="widget_tag_cloud">
-		    <h2>tags cloud</h2>
-		    <div class="tagcloud">
-		      <% site.tags.forEach(function(tag, tagIndex) { %>
-		        <a href="<%= site.customConfig.website %>/tag/<%= tag.slug %>" style="hover{color:green !important;}" class="ctag ctag-<%= tagIndex %> ctag-<%= tag.slug %>" aria-label=""><%= tag.name %></a>
-				
-		      <% }); %>
-		    </div>
-		
-		  </section>
-		  </div>
-		  </section>
-		  </div>
-		  <% } %>
-		  
-		
-    </div>
-    <% } %>
+			<section>
+				<% if (site.customConfig.if3Dtitle == true) {%>
+				<h2>
+					<div class="wrapper">
+						<div class="header-wrap">
+							About
+						</div>
+					</div>
+				</h2>
+				<% } else{%>
+				<h2>About</h2>
+				<% } %>
+				<p>
+					<%- themeConfig.siteDescription %>
+				</p>
+			</section>
+
+			<section>
+				<% if (site.customConfig.if3Dtitle == true) {%>
+				<h2>
+					<div class="wrapper">
+						<div class="header-wrap">
+							FOLLOW ME ON ...
+						</div>
+					</div>
+				</h2>
+				<% } else{%>
+				<h2>FOLLOW ME ON ...</h2>
+				<% } %>
+
+
+				<ul class="icons">
+					<% ['blogger', 'wikipedia-w','github', 'twitter','instagram', 'weibo', 'zhihu', 'facebook'].forEach((item) => { %>
+					<% if (site.customConfig[item]) { %>
+					<li><a href="<%= site.customConfig[item] %>" class="icon brands fa-<%= item %>"><span class="label">
+								<%= item %></span></a></li>
+					<% } %>
+					<% }) %>
+				</ul>
+			</section>
+			<p class="copyright">
+				<%- themeConfig.footerInfo %>
+				<br>
+				theme by <a href="https://github.com/LifeAlsoIsGG/gridea-theme-multiverse-lens">Multiverse&Lens</a>
+				<br>
+				source from <a href="https://html5up.net/">HTML5 UP</a>
+			</p>
+		</div>
+
+
+		<div>
+			<section>
+				<div style="width:100%;">
+					<% if (site.customConfig.if3Dtitle == true) {%>
+					<h2>
+						<div class="wrapper">
+							<div class="header-wrap">
+								tags cloud
+							</div>
+						</div>
+					</h2>
+					<% } else{%>
+					<h2>tags cloud</h2>
+					<% } %>
+					
+					<% site.tags.forEach(function(tag, tagIndex) { %>
+					<% if (site.customConfig.tagscloud != false) {%>
+					<% if (site.customConfig.tagscloud === 'highlight') {%>
+					<a href="<%= site.customConfig.website %>/tag/<%= tag.slug %>" style="text-decoration: none;"><button class="btn btn-<%= tagIndex%6 %>">
+							<font size="3rpx">
+								<%= tag.name %>
+							</font>
+						</button>
+					</a>
+					<% } else if (site.customConfig.tagscloud === 'various'){%>
+					<section id="tag_cloud-2" class="widget_tag_cloud">
+						<div class="tagcloud">
+							<% site.tags.forEach(function(tag, tagIndex) { %>
+							<a href="<%= site.customConfig.website %>/tag/<%= tag.slug %>" class="ctag ctag-<%= tagIndex %> ctag-<%= tag.slug %>" aria-label="">
+								<%= tag.name %></a>
+							<% }); %>
+						</div>
+					</section>
+					<% } %>
+					<% } %>
+					<% }); %>
+
+				</div>
+			</section>
+		</div>
+
+
+	</div>
+	<% } %>
 </footer>

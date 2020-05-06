@@ -5,8 +5,8 @@
 
 	"customConfig": [{
 			"name": "scheme",
-			"label": "外观",
-			"group": "布局",
+			"label": "主题",
+			"group": "外观",
 			"value": "multiverse",
 			"type": "radio",
 			"options": [{
@@ -20,36 +20,57 @@
 			]
 		},
 		{
-			"name": "ifDate",
-			"label": "是否显示时间",
-			"group": "布局",
-			"value": "true",
-			"type": "select",
-			"note": "时间格式在基本配置中设置",
+			"name": "if3Dtitle",
+			"label": "字体是否3D",
+			"group": "外观",
+			"value": true,
+			"type": "radio",
+			"note": "仅multiverse主题有效",
 			"options": [{
-					"label": "true",
+					"label": "是",
 					"value": true
 				},
 				{
-					"label": "false",
+					"label": "否",
+					"value": false
+				}
+			]
+		},
+		{
+			"name": "ifDate",
+			"label": "是否显示时间",
+			"group": "外观",
+			"value": true,
+			"type": "radio",
+			"note": "仅multiverse主题有效,时间格式在基本设置调",
+			"options": [{
+					"label": "是",
+					"value": true
+				},
+				{
+					"label": "否",
 					"value": false
 				}
 			]
 		},
 		{
 			"name": "tagscloud",
-			"label": "是否显示标签云",
-			"group": "布局",
-			"value": "true",
-			"type": "select",
+			"label": "标签云样式",
+			"group": "外观",
+			"value": false,
+			"type": "radio",
 			"note": "仅multiverse主题有效",
 			"options": [{
-					"label": "true",
-					"value": true
+					"label": "不显示",
+					"value": false
 				},
 				{
-					"label": "false",
-					"value": false
+					"label": "多彩",
+					"value": "various"
+				},
+				{
+					"label": "霓虹灯",
+					"value": "highlight"
 				}
 			]
 		},

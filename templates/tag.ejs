@@ -6,126 +6,116 @@
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html lang="zh-cn">
-<head>
-    <%- include('includes/head', { siteTitle: themeConfig.siteName }) %>
-</head>
-<body <% if (scheme === 'lens') {%>class="is-preload-0 is-preload-1 is-preload-2"<% } else {%>class="is-preload"<% } %>>
+	<head>
+		<%- include('includes/head', { siteTitle: themeConfig.siteName }) %>
+	</head>
+	<body <% if (scheme==='lens' ) {%>class="is-preload-0 is-preload-1 is-preload-2"
+		<% } else {%>class="is-preload"
+		<% } %>>
 
-<!-- 外封 -->
-<div <% if (scheme === 'lens') {%>id="main"<% } else {%>id="wrapper"<% } %>>
+		<!-- 外封 -->
+		<div <% if (scheme==='lens' ) {%>id="main"
+			<% } else {%>id="wrapper"
+			<% } %>>
 
-    <!-- 页眉 -->
-    <header id="header">
-        <% let scheme = site.customConfig.scheme; %><% if (scheme === 'lens') {%>
-        <h1><%= themeConfig.siteName %></h1>
-        <p><%- themeConfig.siteDescription %></p>
-        <ul class="icons">
-            <% ['blogger', 'wikipedia-w','github', 'twitter','instagram','weibo', 'zhihu', 'facebook'].forEach((item) => { %>
-                <% if (site.customConfig[item]) { %>
-                <li><a href="<%= site.customConfig[item] %>" class="icon brands fa-<%= item %>"><span class="label"><%= item %></span></a></li>
-                <% } %>
-            <% }) %>
-        </ul>
-        <% } else {%>
-        <h1><strong><a href="<%= site.customConfig.website %>"><%= themeConfig.siteName %></a></strong>tag:<%= tag.name %></h1>
-        <nav>
-            <ul>
-                <% if (pagination.prev) { %>
-                <li><a href="真实链接(建议在最后一次预览后进入output里面修改所有有分页的index.html)" class="icon solid fa-angle-left">prev</a></li>
-                <% } %>
-                <% if (pagination.next) { %>
-                <li><a href="真实链接/page/2" class="icon solid fa-angle-right">next</a></li>
-                <% } %>
-                <li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
-            </ul>
-        </nav>
-        <% } %>
-    </header>
-	
-	
-
-    <!-- 主要内容 -->
-	<% if (site.customConfig.scheme === 'lens') {%>
-	<section id="thumbnails">
-	    <% posts.forEach(function(post) { %>
-	        <article>
-	        <% if (post.feature) { %>
-	        <a class="thumbnail" href="<%= post.feature %>"><img src="<%= post.feature %>" alt="" /></a>
-	        <% } %>
-	        <h2><%= post.title %></h2>
-	        <%- post.content %>
-	    </article>
-	    <% }); %>
-	</section>
-	<% } else {%>
-	<main id="main">
-		<article class="thumb">
-        
-            <a href="<%= site.customConfig.website %>/images/avatar.png" class="image"><img src="<%= site.customConfig.website %>/images/avatar.png"></a>		
-			<h2><font size="20rpx">tag:<%= tag.name %></font></h2>
-		</article>
-				
-	    <% posts.forEach(function(post) { %>
-	    <article class="thumb">
-	        <% if (post.feature) { %>
-	            <a href="<%= post.feature %>" class="image"><img src="<%= post.feature %>" /></a>
-	        <% } %>
-			<% if (site.customConfig.ifDate == true) {%>
-	        <h2><font size="3rpx"><%= post.title %></font>
-	            <br>
-	            <font size="2rpx"><%= post.dateFormat %></font>
-	        </h2>
-			<%}else{%>
-				<h2><%= post.title %></h2>
-			<%}%>
-	        <%- post.content %>
-	    </article>
-	    <% }); %>
-	</main>
-	<% } %>
-	
-
-    <!-- 页脚 -->
-    <%- include('includes/footer') %>
-
-</div>
+			<!-- 页眉 -->
+			<header id="header">
+				<% if (scheme === 'lens') {%>
+				<h1>
+					<%= themeConfig.siteName %>
+				</h1>
+				<p>
+					<%- themeConfig.siteDescription %>
+				</p>
+				<ul class="icons">
+					<% ['blogger', 'wikipedia-w','github', 'twitter','instagram','weibo', 'zhihu', 'facebook'].forEach((item) => { %>
+					<% if (site.customConfig[item]) { %>
+					<li><a href="<%= site.customConfig[item] %>" class="icon brands fa-<%= item %>"><span class="label">
+								<%= item %></span></a></li>
+					<% } %>
+					<% }) %>
+				</ul>
+				<% } else {%>
 
 
-<!-- 脚本 -->
-<% let jsdelivr = "https://cdn.jsdelivr.net/gh/"+site.customConfig.username+"/"+site.customConfig.repository; %>
-<% if (scheme === 'lens') {%>
-<% if ( site.customConfig.jsdelivr == true) { %>
-<script src="<%= jsdelivr %>/media/scripts/jquery.min.js"></script>
-<script src="<%= jsdelivr %>/media/scripts/browser.min.js"></script>
-<script src="<%= jsdelivr %>/media/scripts/breakpoints.min.js"></script>
-<script src="<%= jsdelivr %>/media/scripts/main-lens.js"></script>
-<% } else{ %>
-<script src="media/scripts/jquery.min.js"></script>
-<script src="media/scripts/browser.min.js"></script>
-<script src="media/scripts/breakpoints.min.js"></script>
-<script src="media/scripts/main-lens.js"></script>
-<% }%>
+				<% if (site.customConfig.if3Dtitle == true) {%>
+				<h1><strong>
+						<a href="<%= site.customConfig.website %>">
+							<div class="wrapper">
+								<div class="header-wrap">
+									
+										<%= themeConfig.siteName %>
+									
+								</div>
+							</div>
+						</a>
+					</strong><%= tag.name %></h1>
+				<% } else{%>
+				<h1><strong><a href="<%= site.customConfig.website %>">
+							<%= themeConfig.siteName %></a></strong><%= tag.name %></h1>
+				<% } %>
 
-<% } else {%>
-<% if ( site.customConfig.jsdelivr == true) { %>
-<script src="<%= jsdelivr %>/media/scripts/jquery.min.js"></script>
-<script src="<%= jsdelivr %>/media/scripts/jquery.poptrox.min.js"></script>
-<script src="<%= jsdelivr %>/media/scripts/browser.min.js"></script>
-<script src="<%= jsdelivr %>/media/scripts/breakpoints.min.js"></script>
-<script src="<%= jsdelivr %>/media/scripts/util-multiverse.js"></script>
-<script src="<%= jsdelivr %>/media/scripts/main-multiverse.js"></script>
-<% } else{ %>
-<script src="media/scripts/jquery.min.js"></script>
-<script src="media/scripts/jquery.poptrox.min.js"></script>
-<script src="media/scripts/browser.min.js"></script>
-<script src="media/scripts/breakpoints.min.js"></script>
-<script src="media/scripts/util-multiverse.js"></script>
-<script src="media/scripts/main-multiverse.js"></script>
-<% }%>
+				<nav>
+					<ul>
+						<% if (pagination.prev) { %>
+						<li><a href="真实链接(建议在最后一次预览后进入output里面修改所有有分页的index.html)" class="icon solid fa-angle-left">prev</a></li>
+						<% } %>
+						<% if (pagination.next) { %>
+						<li><a href="真实链接/page/2" class="icon solid fa-angle-right">next</a></li>
+						<% } %>
+						<li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
+					</ul>
+				</nav>
+				<% } %>
+			</header>
 
 
 
-<% } %>
+			<!-- 主要内容 -->
+			<%- include('includes/post-list') %>
 
-</body>
+
+			<!-- 页脚 -->
+			<%- include('includes/footer') %>
+
+		</div>
+
+
+		<!-- 脚本 -->
+		<% let jsdelivr = "https://cdn.jsdelivr.net/gh/"+site.customConfig.username+"/"+site.customConfig.repository; %>
+		<% if (scheme === 'lens') {%>
+		<% if ( site.customConfig.jsdelivr == true) { %>
+		<script src="<%= jsdelivr %>/media/scripts/jquery.min.js"></script>
+		<script src="<%= jsdelivr %>/media/scripts/browser.min.js"></script>
+		<script src="<%= jsdelivr %>/media/scripts/breakpoints.min.js"></script>
+		<script src="<%= jsdelivr %>/media/scripts/main-lens.js"></script>
+		<% } else{ %>
+		<script src="media/scripts/jquery.min.js"></script>
+		<script src="media/scripts/browser.min.js"></script>
+		<script src="media/scripts/breakpoints.min.js"></script>
+		<script src="media/scripts/main-lens.js"></script>
+		<% }%>
+
+		<% } else {%>
+		<% if ( site.customConfig.jsdelivr == true) { %>
+		<script src="<%= jsdelivr %>/media/scripts/jquery.min.js"></script>
+		<script src="<%= jsdelivr %>/media/scripts/jquery.poptrox.min.js"></script>
+		<script src="<%= jsdelivr %>/media/scripts/browser.min.js"></script>
+		<script src="<%= jsdelivr %>/media/scripts/breakpoints.min.js"></script>
+		<script src="<%= jsdelivr %>/media/scripts/util-multiverse.js"></script>
+		<script src="<%= jsdelivr %>/media/scripts/main-multiverse.js"></script>
+		<% } else{ %>
+		<script src="media/scripts/jquery.min.js"></script>
+		<script src="media/scripts/jquery.poptrox.min.js"></script>
+		<script src="media/scripts/browser.min.js"></script>
+		<script src="media/scripts/breakpoints.min.js"></script>
+		<script src="media/scripts/util-multiverse.js"></script>
+		<script src="media/scripts/main-multiverse.js"></script>
+		<% }%>
+
+
+
+		<% } %>
+
+	</body>
 </html>

@@ -212,9 +212,8 @@ input, select, textarea {
 		-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 		transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-		border-bottom: dotted 1px;
 		color: #34a58e;
-		text-decoration: none;
+		text-decoration: none ;
 	}
 
 		a:hover {
@@ -363,7 +362,7 @@ input, select, textarea {
 
 /* Button */
 
-	input[type="submit"],
+/* 	input[type="submit"],
 	input[type="reset"],
 	input[type="button"],
 	button,
@@ -490,7 +489,7 @@ input, select, textarea {
 		.button:disabled {
 			pointer-events: none;
 			opacity: 0.35;
-		}
+		} */
 
 /* Form */
 

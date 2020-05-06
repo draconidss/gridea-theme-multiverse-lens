@@ -9,17 +9,30 @@
             <% } %>
         <% }) %>
     </ul>
+	
     <% } else {%>
-    <h1><strong><a href="<%= site.customConfig.website %>"><%= themeConfig.siteName %></a></strong> 由 <a href="https://html5up.net">HTML5 UP</a> 设计样式。</h1>
+	<% if (site.customConfig.if3Dtitle == true) {%>
+	<h1><strong>
+	<a href="<%= site.customConfig.website %>">
+	<div class="wrapper">
+	  <div class="header-wrap">
+	    <%= themeConfig.siteName %>
+	  </div>
+	</div>
+	</a>
+	</strong></h1>
+	<% } else{%>
+		<h1><strong><a href="<%= site.customConfig.website %>"><%= themeConfig.siteName %></a></strong></h1>
+	<% } %>
     <nav>
         <ul>
-            <% if (pagination.prev) { %>
-            <li><a href="<%= site.customConfig.website %>" class="icon solid fa-angle-left">prev</a></li>
-            <% } %>
-            <% if (pagination.next) { %>
-            <li><a href="<%= site.customConfig.website %>/page/2" class="icon solid fa-angle-right">next</a></li>
-            <% } %>
-            <li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
+           <% if (pagination.prev) { %>
+           <li><a href="真实链接(建议在最后一次预览后进入output里面修改所有有分页的index.html)" class="icon solid fa-angle-left">prev</a></li>
+           <% } %>
+           <% if (pagination.next) { %>
+           <li><a href="真实链接/page/2" class="icon solid fa-angle-right">next</a></li>
+           <% } %>
+           <li><a href="#footer" class="icon solid fa-info-circle">About</a></li>
         </ul>
     </nav>
     <% } %>
