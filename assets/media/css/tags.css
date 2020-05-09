@@ -21,7 +21,27 @@
   text-shadow: 0 -1px 0 #fff, 0 1px 0 #004d40, 0 2px 0 #00483B, 0 3px 0 #004639, 0 4px 0 #004336, 0 5px 0 #004134, 0 6px 0 #003F32, 0 7px 0 #003D30, 0 8px 0 #003A2D, 0 9px 0 #00382B, 0 10px 0 #003528, 0 11px 0 #003225, 0 12px 0 #002F22, 0 13px 0 #002B1E, 0 14px 0 #00281C, 0 15px 0 #001F13, 0 22px 30px rgba(0, 0, 0, 0.9), 0 22px 30px rgba(0, 0, 0, 0.9), 0 22px 15px rgba(0, 0, 0, 0.9), 0 11px 15px rgba(0, 0, 0, 0.9), 0 15px 20px rgba(0, 0, 0, 0.9), 0 15px 11px rgba(0, 0, 0, 0.9), 0 16px 11px rgba(0, 0, 0, 0.9);
   transition: text-shadow .3s ease .3s,  transform .3s ease .3s, letter-spacing .3s ease .3s;
 }
+.header-wrap-title {
+  display: block;
+  width: auto;
+  height: auto;
+  padding: 0;
+  text-align: center;
+  font-size: 10px;
+  transform: perspective(200px) rotateX(10deg);
+  letter-spacing: .1em;
+  user-select: none;
+  text-shadow: 0 -1px 0 #fff, 0 1px 0 #004d40, 0 2px 0 #00483B, 0 3px 0 #004639, 0 4px 0 #004336, 0 5px 0 #004134, 0 6px 0 #003F32, 0 7px 0 #003D30, 0 8px 0 #003A2D, 0 9px 0 #00382B, 0 10px 0 #003528, 0 11px 0 #003225, 0 12px 0 #002F22, 0 13px 0 #002B1E, 0 14px 0 #00281C, 0 15px 0 #001F13, 0 22px 30px rgba(0, 0, 0, 0.9), 0 22px 30px rgba(0, 0, 0, 0.9), 0 22px 15px rgba(0, 0, 0, 0.9), 0 11px 15px rgba(0, 0, 0, 0.9), 0 15px 20px rgba(0, 0, 0, 0.9), 0 15px 11px rgba(0, 0, 0, 0.9), 0 16px 11px rgba(0, 0, 0, 0.9);
+  transition: text-shadow .3s ease .3s,  transform .3s ease .3s, letter-spacing .3s ease .3s;
+}
 .header-wrap:hover {
+  transition: text-shadow .33s ease,  transform .3s ease, letter-spacing .3s ease;
+  text-shadow: 0 0 0 #004134, 0 1px 0 #00483B, 0 2px 0 #003528, 0 3px 3px rgba(0, 0, 0, 0.9);
+  transform: translate(0px, 15px) perspective(200px) rotateX(10deg);
+  letter-spacing: .125em;
+}
+
+.header-wrap-title:hover {
   transition: text-shadow .33s ease,  transform .3s ease, letter-spacing .3s ease;
   text-shadow: 0 0 0 #004134, 0 1px 0 #00483B, 0 2px 0 #003528, 0 3px 3px rgba(0, 0, 0, 0.9);
   transform: translate(0px, 15px) perspective(200px) rotateX(10deg);
@@ -46,8 +66,8 @@
 }
 
 .btn-0 {
-  color: #d3f169;
-  box-shadow: 0 2px 8px #d3f169;
+  color: #63b0ee;
+  box-shadow: 0 2px 8px #63b0ee;
 }
 .btn-0:hover {
   -webkit-animation: zigzag 1s linear infinite;
@@ -55,7 +75,7 @@
   background: -webkit-linear-gradient(315deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) -0.5em 0, -webkit-linear-gradient(225deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) -0.5em 0, -webkit-linear-gradient(135deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) 0 0, -webkit-linear-gradient(45deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) 0 0;
   background: linear-gradient(135deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) -0.5em 0, linear-gradient(225deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) -0.5em 0, linear-gradient(315deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) 0 0, linear-gradient(45deg, rgba(238, 161, 99, 0.25) 0.25em, transparent 0.25em) 0 0;
   background-size: 0.75em 0.75em;
-  color: #63b0ee;
+  color: #d3f169;
 }
 
 @-webkit-keyframes sawtooth {
