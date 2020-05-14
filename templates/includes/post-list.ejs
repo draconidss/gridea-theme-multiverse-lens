@@ -18,14 +18,14 @@
             <a href="<%= post.feature %>" class="image"><img src="<%= post.feature %>" /></a>
         <% } %>
 		<% if (site.customConfig.ifDate == true) {%>
-        <h2><font size="3rpx"><%= post.title %></font>
-            <br>
-            <font size="2rpx"><%= post.dateFormat %></font>
-        </h2>
+		<h2><font size="3rpx"><%= post.title %></font>
+		    <br>
+		    <font size="2rpx"><%= post.dateFormat %></font>
+		</h2>
 		<%}else{%>
-			<h2><%= post.title %></h2>
+			<h2><font size="3rpx"><%= post.title %></font></h2>
 		<%}%>
-        <%- post.content %>
+		<%- post.content %>
     </article>
     <% }); %>
 </main>
